@@ -3,8 +3,8 @@ const server = express();
 
 server.use(express.json());
 
-const cors = require('cors');
-server.use(cors());
+// const cors = require('cors');
+// server.use(cors());
 
 const logger = require('./middleware/logger-middleware');
 server.use(logger);
