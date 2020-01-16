@@ -9,8 +9,8 @@ server.use(express.json());
 const logger = require('./middleware/logger-middleware');
 server.use(logger);
 
-const helmet = require('helmet');
-server.use(helmet());
+// const helmet = require('helmet');
+// server.use(helmet());
 
 const userRouter = require('./users/userRouter');
 const postRouter = require('./posts/postRouter');
