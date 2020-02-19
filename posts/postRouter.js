@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
         })
 });
 
-router.get('/:postId', (req, res) => {
+router.get('/:postId', validation.validatePostId, (req, res) => {
     const postId = req.params.postId;
     postDb.getById(postId)
         .then( posts => {
@@ -27,7 +27,7 @@ router.get('/:postId', (req, res) => {
         })
 });
 
-router.delete('/:postId', (req, res) => {
+router.delete('/:postId', validation.validatePostId, (req, res) => {
     const postId = req.params.postId;
     postDb.remove(postId)
         .then( posts => {
