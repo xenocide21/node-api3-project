@@ -1,7 +1,7 @@
 const express = require('express');
 const postDb = require('./postDb');
 const router = express.Router();
-const validation = require('../middleware/validation-middleware')
+const validation = require('../middleware/validation')
 
 router.get('/', (req, res) => {
     postDb.get()
